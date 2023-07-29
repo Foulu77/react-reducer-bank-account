@@ -23,7 +23,7 @@ function reducer (state, action) {
     case "withdraw":
         return {
           ...state,
-          balance: state.balance - 50,
+          balance: state.balance > 0 ? state.balance - 50 : state.balance,
         }
     case "requestLoan":
         return {
